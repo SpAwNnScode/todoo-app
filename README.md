@@ -11,9 +11,9 @@ A simple full-stack ToDo application with separate backend and frontend services
 
 ## Technology Stack
 
-- **Backend:** Built from the code in the `backend` directory (likely Node.js/Express, check the code for specific details).
-- **Frontend:** Built from the code in the `frontend` directory (a React application using environment variables like `REACT_APP_API_URL`).
-- **Database:** PostgreSQL 15, pre-configured with initialization SQL (see `./backend/database.sql`).
+- **Backend:**  Node.js/Express
+- **Frontend:** React 
+- **Database:** PostgreSQL 15, pre-configured with initialization SQL .
 
 ## Prerequisites
 
@@ -27,7 +27,6 @@ Follow these steps to set up and run the application locally:
 
 1. **Clone the Repository**
 
-   ```bash
    git clone https://github.com/SpAwNnScode/todoo-app.git
    cd todoo-app
 
@@ -51,8 +50,12 @@ Feel free to modify these variables or the Docker Compose configuration as neede
 Development
 Backend
 Navigate to the backend directory.
+
 Install dependencies and run the server locally (if you prefer not to use Docker during development).
+
 Frontend
 Navigate to the frontend directory.
+
 Install dependencies using npm install or yarn install and run the development server with npm start or yarn start.
+
 Note: When running locally outside Docker, make sure to update the API URL in the frontend to match your backend’s address.
