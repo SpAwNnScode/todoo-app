@@ -1,6 +1,6 @@
-# ToDo App
+# ToDo List App
 
-A simple full-stack ToDo application with separate backend and frontend services, orchestrated with Docker Compose. This project allows you to manage tasks with a user-friendly interface, and it leverages Docker to simplify development and deployment.
+A simple full-stack ToDo Lost application with separate backend and frontend services, orchestrated with Docker Compose. This project allows you to manage tasks with a user-friendly interface, and it leverages Docker to simplify development and deployment.
 
 ## Features
 
