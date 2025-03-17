@@ -1,61 +1,81 @@
 # ToDo List App
 
-A simple full-stack ToDo Lost application with separate backend and frontend services, orchestrated with Docker Compose. This project allows you to manage tasks with a user-friendly interface, and it leverages Docker to simplify development and deployment.
+A simple full-stack ToDo List application with separate backend and frontend services, orchestrated using Docker Compose. This project enables users to manage tasks through a user-friendly interface while leveraging Docker for simplified development and deployment.
 
 ## Features
-
-- **Task Management:** Create, read, update, and delete to-do items.
-- **Full-stack Architecture:** A dedicated backend service for API handling and a React-based frontend for the user interface.
-- **Dockerized Environment:** Easy setup and deployment using Docker Compose.
-- **PostgreSQL Database:** Stores tasks and persists data using a Postgres container.
+- **Task Management**: Create, read, update, and delete tasks.
+- **Full-stack Architecture**: Dedicated backend service for API handling and a React-based frontend for the user interface.
+- **Dockerized Environment**: Easy setup and deployment using Docker Compose.
+- **PostgreSQL Database**: Persistent data storage using a PostgreSQL container.
 
 ## Technology Stack
-
-- **Backend:**  Node.js/Express
-- **Frontend:** React 
-- **Database:** PostgreSQL 15, pre-configured with initialization SQL .
+- **Backend**: Node.js with Express.js
+- **Frontend**: React.js
+- **Database**: PostgreSQL 15, pre-configured with initialization SQL
 
 ## Prerequisites
-
-- [Docker](https://www.docker.com/get-started) (v20.10 or later)
-- [Docker Compose](https://docs.docker.com/compose/install/) (v1.27 or later)
-- Git
+Ensure you have the following installed before proceeding:
+- **Docker** (v20.10 or later)
+- **Docker Compose** (v1.27 or later)
+- **Git**
 
 ## Getting Started
+Follow these steps to set up and run the application locally.
 
-Follow these steps to set up and run the application locally:
+### 1. Clone the Repository
+```sh
+git clone https://github.com/SpAwNnScode/todoo-app.git
+cd todoo-app
+```
 
-1. **Clone the Repository**
-
-   git clone https://github.com/SpAwNnScode/todoo-app.git
-   cd todoo-app
-
-
-2. **Run Docker Compose
-
-Build and run all services (backend, frontend, and PostgreSQL):
-
+### 2. Run with Docker Compose
+Build and run all services (backend, frontend, and database) with:
+```sh
 docker-compose up --build
+```
 
-Backend Service:
+### 3. Backend Service
+- **PORT**: The backend server runs on port `3000` by default.
+- **DATABASE_URL**: Connection string for PostgreSQL database.
 
-PORT: Port on which the backend server runs (default is 3000).
-DATABASE_URL: Connection string for the PostgreSQL database.
+### 4. Frontend Service
+- **REACT_APP_API_URL**: URL for the backend API (set to `http://backend:3000` for internal Docker networking).
 
-Frontend Service:
+You can modify these variables in the Docker Compose configuration as needed.
 
-REACT_APP_API_URL: URL for the backend API (set to http://backend:3000 for internal Docker networking).
-Feel free to modify these variables or the Docker Compose configuration as needed.
+## Development Mode (Without Docker)
 
-Development
-Backend
-Navigate to the backend directory.
+### Running the Backend Locally
+1. Navigate to the backend directory:
+   ```sh
+   cd backend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm start
+   ```
 
-Install dependencies and run the server locally (if you prefer not to use Docker during development).
+### Running the Frontend Locally
+1. Navigate to the frontend directory:
+   ```sh
+   cd frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend server:
+   ```sh
+   npm start
+   ```
 
-Frontend
-Navigate to the frontend directory.
+**Note**: When running locally outside of Docker, update the API URL in the frontend configuration to match your backend’s local address.
 
-Install dependencies using npm install or yarn install and run the development server with npm start or yarn start.
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests to enhance this project.
 
-Note: When running locally outside Docker, make sure to update the API URL in the frontend to match your backend’s address.
+
